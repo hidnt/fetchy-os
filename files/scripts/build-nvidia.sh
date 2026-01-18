@@ -6,15 +6,6 @@ echo "Building nvidia proprietary drivers"
 
 cd /etc/yum.repos.d/
 
-rpm-ostree install \
-    gcc \
-    gcc-c++ \
-    make \
-    automake \
-    akmod-nvidia
-
-rpm -qa | grep nvidia
-
 KERNEL_VERSION=$(rpm -qa kernel-cachyos-core | sed 's/kernel-cachyos-core-//')
 if ! akmods --force --kernels "$KERNEL_VERSION" --rebuild; then
     cat /var/cache/akmods/nvidia/*.failed.log
