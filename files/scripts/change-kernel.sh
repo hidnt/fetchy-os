@@ -14,8 +14,10 @@ rpm-ostree override remove \
     kernel-modules \
     kernel-modules-core \
     kernel-modules-extra \
-    --install kernel-headers \
+    kernel-devel \
+    kernel-devel-matched \
     --install kernel-cachyos \
+    --install kernel-headers \
     --install kernel-cachyos-devel-matched
 
 echo "CachyOS kernel setup completed"
