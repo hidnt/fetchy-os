@@ -14,7 +14,6 @@ rpm-ostree override remove \
     kernel-modules \
     kernel-modules-core \
     kernel-modules-extra \
-    nvidia \
     --install kernel-headers \
     --install kernel-cachyos \
     --install kernel-cachyos-devel-matched
